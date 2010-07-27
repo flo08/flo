@@ -1,0 +1,87 @@
+theme
+# autor flo08
+panel
+	position top
+	background background.png
+	separator krop.png
+	
+desktop_switcher
+	idle
+		left_corner background.png
+		left background.png
+		center background.png
+		right background.png
+		right_corner background.png
+		font cure 7
+			color 120 120 120
+			offset 0 0
+		align center
+		
+	pressed
+		left_corner background.png
+		left background.png
+		center background.png
+		right background.png
+		right_corner background.png
+		font cure 7
+			color 71 122 179
+			offset 0 0
+		align center
+
+
+taskbar
+	idle
+		left background.png
+		center background.png
+		right background.png
+		font cure 6
+			color 120 120 120
+			offset 5 0
+		icon_offset 0 0
+		align left
+
+	idle_highlight
+		left button-prelight.png
+		center button-prelight.png
+		right button-prelight.png
+		font cure 6
+			color 120 120 120
+			offset 5 0
+		icon_offset 0 0
+		align left
+	
+	pressed
+		left button-active.png
+		center button-active.png
+		right button-active.png
+		font cure 6
+			color 71 122 179
+			offset 5 0
+		icon_offset 0 0
+		align left
+		
+	pressed_highlight
+		left button-active.png
+		center button-active.png
+		right button-active.png
+		font cure 6
+			color 71 122 179
+			offset 5 0
+		icon_offset 0 0
+		align left
+
+	task_max_width 120
+
+
+clock	
+	no_separator
+	font cure  7
+		color 71 122 179
+		offset 0 0
+		align center
+
+	time_format %d.%m | %H:%M  
+
+
+
+
