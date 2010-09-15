@@ -1,45 +1,9 @@
-#avoid flicker
-double_buffer yes
-
-#own window to run simultanious 2 or more conkys
-own_window  yes
-own_window_transparent no
-own_window_type desktop
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager 
-background yes
-
-#borders
-draw_borders no
-border_inner_margin 1
-border_outer_margin 0
-
-#shades
-draw_shades no
-
-#position
-gap_x 0
-gap_y 0
-alignment top_left
-
-#behaviour
+background no
+out_to_x no
+out_to_console yes
 update_interval 1
-
-own_window_colour 101010
-#font
-use_xft yes
-font cure:pixelsize=7
-
-# Force UTF8? note that UTF8 support required XFT
-override_utf8_locale yes
-
-#to prevent window from moving
+total_run_times 0
 use_spacer none
-minimum_size 1280
-maximum_width 1280
-
-# Network interface must have an ip address to be considered up
-if_up_strictness address
-
 
 TEXT
-${color #787878}${if_mpd_playing}${mpd_artist} - ${color #477ab3}${mpd_title}${endif}${alignr}${color #477ab3} up: ${color #787878}${uptime_short} |${color #477ab3} cpu1: ${color #787878}${cpu cpu1}%${color #477ab3} cpu2: ${color #787878}${cpu cpu2}%${color #477ab3} mem: ${color #787878}${memperc}% |${color #477ab3} root: ${color #787878}${fs_used_perc /}%${color #477ab3} home: ${color #787878}${fs_used_perc /home}% |${color #477ab3} bat: ${color #787878}${battery BAT1} |${color #477ab3} upd: ${color #787878}${execpi 3600 paconky /home/flo08/.paconky/config} |${color #477ab3} vol: ${color #787878}${exec /home/flo08/.scripts/volume_level.sh} |         | 
+~ ^fg(\#6d6d6d)MPD: ^fg(\#dadada)${mpd_smart} |^fg(\#6d6d6d)!CPU: ^fg(\#dadada)${cpu cpu1}% ^fg(\#6d6d6d)?CPU: ^fg(\#dadada)${cpu cpu2}% |^fg(\#6d6d6d)&RAM: ^fg(\#dadada)${mem}|^fg(\#6d6d6d),HOME: ^fg(\dadada)${fs_used_perc /home}%|^fg(\#6d6d6d)+VOL: ^fg(\#dadada)${mixer}% |^fg(\#6d6d6d)'^fg(\#dadada)${time %d-%m-%Y}^fg(\#6d6d6d)///^fg(\#dadada)${time %r}|
